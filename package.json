@@ -1,5 +1,10 @@
 {
+  "name": "zakarian-jewelry-shop",
   "private": true,
+  "author": {
+    "name": "Hayk Abrahamyan",
+    "email": "abrahamyanhayk@01@gmail.com"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
