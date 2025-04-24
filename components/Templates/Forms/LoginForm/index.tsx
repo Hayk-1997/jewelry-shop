@@ -10,6 +10,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { LoginSchema, loginSchema } from '@/schema/auth/loginSchema';
 import MainButton from '@/components/Molecules/MainButton';
 import { useUserLoginMutation } from '@/lib/apiModules/auth/api';
+import Link from 'next/link';
 
 const LoginForm: React.FC = (): React.JSX.Element => {
   const [showPassword, setShowPassword] = useState(false);
@@ -60,33 +61,13 @@ const LoginForm: React.FC = (): React.JSX.Element => {
       <div className="form-login-bottom-wrapper grid-x">
         <div className="form-group remember-me cell small-6">
           <label className="custom-control-label boolean-field" htmlFor="rememberMe">
-            <input
-              type="checkbox"
-              className="custom-control-input"
-              id="rememberMe"
-              name="loginRememberMe"
-              defaultValue="true"
-              data-parsley-multiple="loginRememberMe"
-            />
+            <input type="checkbox" className="custom-control-input" name="loginRememberMe" />
             <span className="checkbox-input" />
             <span className="checkbox-label"> Remember me </span>
           </label>
         </div>
         <div className="forgot-password cell small-6">
-          <a
-            id="password-reset"
-            className=""
-            data-open="forgotPswModal"
-            title="forgot password?"
-            data-toggle="modal"
-            data-href="/on/demandware.store/Sites-INT-Site/default/Account-PasswordResetDialogForm"
-            data-target="#requestPasswordResetModal"
-            aria-controls="forgotPswModal"
-            aria-haspopup="dialog"
-            tabIndex={0}
-          >
-            forgot password?
-          </a>
+          <Link href="/forgot-password">forgot password?</Link>
         </div>
       </div>
       <MainButton type="submit" name="Login" />

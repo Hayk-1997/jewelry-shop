@@ -1,14 +1,12 @@
 import * as z from 'zod';
+import { baseEmailSchema } from '@/schema/baseEmailSchema';
 
 export const registerSchema = z
   .object({
-    firstName: z.string(),
-    lastName: z.string(),
-    email: z
-      .string()
-      .min(1, { message: 'This field has to be filled.' })
-      .email('This is not a valid email.'),
-    password: z.string(),
+    firstName: z.string().min(1, { message: 'This field has to be filled.' }),
+    lastName: z.string().min(1, { message: 'This field has to be filled.' }),
+    email: baseEmailSchema,
+    password: z.string().min(1, { message: 'This field has to be filled.' }),
     confirmPassword: z.string(),
   })
   .refine((data) => data.password === data.confirmPassword, {
