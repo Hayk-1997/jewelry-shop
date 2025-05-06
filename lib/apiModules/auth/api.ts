@@ -21,4 +21,5 @@ export const {
   useUserLogOutMutation,
   useGetAuthUserQuery,
   useUserRegisterMutation,
+  useUserForgotPasswordMutation,
 } = authApi;

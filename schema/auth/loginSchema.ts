@@ -1,10 +1,8 @@
 import * as z from 'zod';
+import { baseEmailSchema } from '@/schema/baseEmailSchema';
 
 export const loginSchema = z.object({
-  email: z
-    .string()
-    .min(1, { message: 'This field has to be filled.' })
-    .email('This is not a valid email.'),
+  email: baseEmailSchema,
   password: z.string(),
 });
 

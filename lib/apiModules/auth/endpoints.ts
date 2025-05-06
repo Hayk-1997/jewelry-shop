@@ -1,6 +1,8 @@
 import { ApiEndpointBuilder } from '@/lib/apiModules/baseApi';
 import { TUserData, TUserLoginFormRequest } from '@/types/user';
 import { setUserToken } from '@/helpers/auth';
+import { ForgotPasswordSchema } from '@/schema/auth/forgotPasswordSchema';
+import { RegisterSchema } from '@/schema/auth/registerSchema';
 
 export const authEndpoint = (builder: ApiEndpointBuilder) => ({
   getAuthUser: builder.query<TUserData | null, unknown>({
@@ -27,7 +29,7 @@ export const authEndpoint = (builder: ApiEndpointBuilder) => ({
     invalidatesTags: ['User'],
   }),
   userRegister: builder.mutation({
-    query: (payload) => ({
+    query: (payload: RegisterSchema) => ({
       url: `register`,
       method: 'POST',
       body: payload,
@@ -37,5 +39,12 @@ export const authEndpoint = (builder: ApiEndpointBuilder) => ({
       return response;
     },
     invalidatesTags: ['User'],
+  }),
+  userForgotPassword: builder.mutation({
+    query: (payload: ForgotPasswordSchema) => ({
+      url: `forgot-password`,
+      method: 'POST',
+      body: payload,
+    }),
   }),
 });

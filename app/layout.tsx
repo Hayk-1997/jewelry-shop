@@ -13,6 +13,7 @@ export default function RootLayout({ children }: Props) {
           <title>Zakarian Jewelry</title>
           <link rel="stylesheet" href="/assets/css/global.min.css" />
           <link rel="stylesheet" href="/assets/css/account.min.css" />
+          <link rel="stylesheet" href="/assets/css/banner.min.css" />
         </head>
         <body suppressHydrationWarning={true}>
           <div className="mainContent">{children}</div>
