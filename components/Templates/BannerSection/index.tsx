@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import Lenis from '@studio-freight/lenis';
 import BannerCircle from '@/components/Organisms/BannerCircle';
 
+import '@assets/styles/banner.min.scss';
+
 const BannerSection: React.FC = (): React.JSX.Element => {
   const sectionRef = useRef<HTMLVideoElement>(null);
   const videoRef = useRef<HTMLDivElement>(null);
@@ -56,13 +58,13 @@ const BannerSection: React.FC = (): React.JSX.Element => {
   return (
     <section id="hero" className="hero" ref={sectionRef}>
       <div className="position-absolute text-center top-100 z-index-10">
-        <h1 className="font-3rem font-bold white">Zakarian Jewelry and online shop </h1>
-        <p className="font-1.25rem margin-top-1rem white">
+        <h1 className="font-size-4xl font-weight-bold color-white">Zakarian Jewelry and online shop </h1>
+        <p className="font-size-base margin-top-1rem color-white">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua.
         </p>
       </div>
-      <div className="position-absolute" style={{ transform: 'translateY(42vh)' }}>
+      <div className="banner_wrapper position-absolute">
         <BannerCircle circleDiameter={1200}>
           <BannerCircle circleDiameter={1000}>
             <BannerCircle circleDiameter={800} />
@@ -70,8 +72,8 @@ const BannerSection: React.FC = (): React.JSX.Element => {
         </BannerCircle>
       </div>
 
-      <div ref={videoRef} className="hero__video cursor-text" style={{ clipPath: 'circle(20% at 50% 74%)' }}>
-        <video autoPlay loop muted playsInline style={{ opacity: 0.6 }}>
+      <div ref={videoRef} className="hero__video cursor-text">
+        <video autoPlay loop muted playsInline>
           <source
             src="https://media2.bulgari.com/video/upload/f_auto,q_auto/v1715000019/HJ/collection/24/meshup-16x9.mp4"
             type="video/mp4"

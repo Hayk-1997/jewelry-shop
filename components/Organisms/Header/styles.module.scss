@@ -1,0 +1,100 @@
+/* Layout & reset */
+.layout {
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.logo {
+  margin-left: 10px;
+  font-size: 1.4rem;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1001;
+
+  & a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    margin: 15px 0;
+  }
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.close_btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+/* Content */
+.content {
+  margin-top: 60px;
+  padding: 20px;
+  background-color: #f9fafb;
+}
