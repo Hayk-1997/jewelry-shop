@@ -1,0 +1,19 @@
+.language_selector {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.language_selector li {
+  position: relative;
+  font-weight: 500;
+}
+
+.language_selector li:not(:last-child)::after {
+  content: '·';
+  margin: 0 0.5rem;
+  color: #555;
+}

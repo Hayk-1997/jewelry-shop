@@ -11924,7 +11924,7 @@ html[dir=rtl] .togglePlayVideo {
 
 .wg1x .wg-text-box, .wg10 .wg-text-box, .wg11 .wg-text-box, .wg12 .wg-text-box, .wg13 .wg-text-box {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     flex-direction: column;
     justify-content: space-between;
     padding: 1.875rem
@@ -20836,51 +20836,4 @@ html[dir=rtl] #plp-offcanvas .close-button {
     #onetrust-button-group {
         padding-left: .9375rem !important
     }
-}
-
-
-/*FONTS*/
-.font-bold {
-    font-weight: bold;
-}
-
-.font-3rem {
-    font-size: 3rem;
-}
-
-.font-1.25rem {
-  font-size: 1.25rem;
-}
-
-/*POSITIONS*/
-.top-100 {
-    top: 100px;
-}
-
-.z-index-10 {
-    z-index: 10;
-}
-
-.position-relative {
-    position: relative !important;
-}
-
-.position-absolute {
-    position: absolute !important;
-}
-
-/*COLORS*/
-.white {
-    color: #fff;
-}
-
-/*SPACING*/
-.margin-top-1rem {
-    margin-top: 1rem;
-}
-
-
-/*BORDERS*/
-.border-radious-50 {
-    border-radius: 50%;
 }

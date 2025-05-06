@@ -1,4 +1,6 @@
 import React from 'react';
+import Circle from '@/components/Organisms/BannerCircle/Circle';
+import { UITransactionDirection } from '@/enum/UITransaction';
 
 interface IProps {
   circleDiameter: number;
@@ -7,7 +9,7 @@ interface IProps {
 
 const BannerCircle: React.FC<IProps> = ({ circleDiameter, children }): React.JSX.Element => {
   const dots = Array.from({ length: 40 });
-  const dotSize = 8;
+  const dotSize = 5;
   const radius = circleDiameter / 2;
 
   const handleRef = (ref: HTMLDivElement | null) => {
@@ -22,7 +24,6 @@ const BannerCircle: React.FC<IProps> = ({ circleDiameter, children }): React.JSX
 
         // Dynamically set rotation direction
         ref.style.transform = `translate3d(0px, 0px, 0px) rotate(${degree}deg)`;
-
         requestAnimationFrame(animate);
       };
 
@@ -41,29 +42,20 @@ const BannerCircle: React.FC<IProps> = ({ circleDiameter, children }): React.JSX
       style={{
         width: `${circleDiameter}px`,
         height: `${circleDiameter}px`,
-        border: '2px dashed transparent', // optional border
+        border: '2px dashed transparent',
         margin: '100px auto',
         background: 'transparent',
       }}
     >
-      {dots.map((_, i) => {
-        const angle = (i / dots.length) * 360;
-        return (
-          <div
-            key={i}
-            className="position-absolute border-radious-50"
-            style={{
-              width: `${dotSize}px`,
-              height: `${dotSize}px`,
-              backgroundColor: '#000',
-              top: `calc(50% - ${dotSize / 2}px)`,
-              left: `calc(50% - ${dotSize / 2}px)`,
-              transform: `rotate(${angle}deg) translate(${radius}px)`,
-              transformOrigin: 'center',
-            }}
-          />
-        );
-      })}
+      {dots.map((_, index) => (
+        <Circle
+          key={index}
+          dotSize={dotSize}
+          angle={(index / dots.length) * 360}
+          baseRadius={radius}
+          scalingDirection={Math.random() > 0.5 ? UITransactionDirection.UP : UITransactionDirection.DOWN}
+        />
+      ))}
       {children && children}
     </div>
   );
