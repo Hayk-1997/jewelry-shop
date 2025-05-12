@@ -6,11 +6,19 @@ interface IProps {
   angle: number;
   baseRadius: number;
   scalingDirection: UITransactionDirection;
+  executeTransition: boolean;
 }
 
-const Circle: React.FC<IProps> = ({ dotSize, angle, baseRadius, scalingDirection }): React.JSX.Element => {
+const Circle: React.FC<IProps> = ({
+  dotSize,
+  angle,
+  baseRadius,
+  scalingDirection,
+  executeTransition,
+}): React.JSX.Element => {
   const circleRef = useRef<HTMLDivElement | null>(null);
   const growing = useRef(true);
+  const animationFrameRef = React.useRef<number>();
 
   useEffect(() => {
     let scale = scalingDirection === UITransactionDirection.UP ? 1 : 2; // Initial scale based on animationType
@@ -28,22 +36,24 @@ const Circle: React.FC<IProps> = ({ dotSize, angle, baseRadius, scalingDirection
         circleRef.current.style.transform = `rotate(${angle}deg) translate(${baseRadius}px) scale(${scale})`;
       }
 
-      requestAnimationFrame(animate);
+      animationFrameRef.current = requestAnimationFrame(animate);
     };
 
-    const animationFrame = requestAnimationFrame(animate);
+    if (executeTransition) {
+      animationFrameRef.current = requestAnimationFrame(animate);
+    }
 
     return () => {
-      if (circleRef.current) {
-        cancelAnimationFrame(animationFrame);
+      if (circleRef.current && animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
       }
     };
-  }, [angle, baseRadius, scalingDirection]);
+  }, [angle, baseRadius, scalingDirection, executeTransition]);
 
   return (
     <div
       ref={circleRef}
-      className="position-absolute border-radious-50"
+      className="absolute rounded-full"
       style={{
         width: dotSize,
         height: dotSize,

@@ -13,7 +13,7 @@ const Header: React.FC = (): React.JSX.Element => {
     <div className={style.layout}>
       <header className={style.header}>
         <div className={style.brand}>Zakarian</div>
-        <div className="d-flex gap-1">
+        <div className="flex gap-4">
           <div>
             <LanguageSelector />
           </div>
