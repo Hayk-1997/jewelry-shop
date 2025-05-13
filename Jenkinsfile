@@ -1,36 +1,23 @@
 pipeline {
     agent any
-
+    
     tools {
-        nodejs 'Node'
+        nodejs 'Node-18.20.8'  // Use the name you configured above
     }
-
+    
     stages {
-        stage('Checkout') {
+        stage('Check Node Version') {
             steps {
-                checkout scm
+                sh 'node --version'  // Verify correct version
+                sh 'npm --version'
             }
         }
-
-        stage('Install Dependencies') {
+        
+        stage('Build Next.js') {
             steps {
-                sh 'npm ci'
-            }
-        }
-
-        stage('Build') {
-            steps {
+                sh 'npm ci'  // Install dependencies
                 sh 'npm run build'
             }
-        }
-    }
-
-    post {
-        success {
-            echo 'Build successful!'
-        }
-        failure {
-            echo 'Build failed!'
         }
     }
 }
