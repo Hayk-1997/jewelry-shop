@@ -15,5 +15,5 @@
 .language_selector li:not(:last-child)::after {
   content: '·';
   margin: 0 0.5rem;
-  color: #555;
+  color: var(--white);
 }

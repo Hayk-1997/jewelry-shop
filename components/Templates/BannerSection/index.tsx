@@ -1,20 +1,26 @@
 import React, { useEffect, useRef } from 'react';
 import Lenis from '@studio-freight/lenis';
 import BannerCircle from '@/components/Organisms/BannerCircle';
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
 import '@assets/styles/banner.min.scss';
 
-const BannerSection: React.FC = (): React.JSX.Element => {
-  const sectionRef = useRef<HTMLVideoElement>(null);
+interface IProps {
+  parentRef: React.RefObject<HTMLElement>;
+}
+
+const BannerSection: React.FC<IProps> = ({ parentRef }): React.JSX.Element => {
   const videoRef = useRef<HTMLDivElement>(null);
+  const { isVisible: contentIsVisible } = useIntersectionObserver(parentRef, {
+    threshold: 0.1,
+    rootMargin: '50px',
+  });
 
   useEffect(() => {
     const lenis = new Lenis({
       duration: 0.8,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
-      smooth: true,
+      smoothWheel: true,
     });
 
     function raf(time: number) {
@@ -56,18 +62,18 @@ const BannerSection: React.FC = (): React.JSX.Element => {
   }, []);
 
   return (
-    <section id="hero" className="hero" ref={sectionRef}>
-      <div className="position-absolute text-center top-100 z-index-10">
-        <h1 className="font-size-4xl font-weight-bold color-white">Zakarian Jewelry and online shop </h1>
-        <p className="font-size-base margin-top-1rem color-white">
+    <section id="hero" className="hero" ref={parentRef}>
+      <div className="absolute text-center top-[100px] z-10">
+        <p className="text-white text-3xl!">Zakarian Jewelry and online shop</p>
+        <p className="text-2xl! mt-4 text-white">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua.
         </p>
       </div>
       <div className="banner_wrapper position-absolute">
-        <BannerCircle circleDiameter={1200}>
-          <BannerCircle circleDiameter={1000}>
-            <BannerCircle circleDiameter={800} />
+        <BannerCircle circleDiameter={1200} executeTransition={contentIsVisible}>
+          <BannerCircle circleDiameter={1000} executeTransition={contentIsVisible}>
+            <BannerCircle circleDiameter={800} executeTransition={contentIsVisible} />
           </BannerCircle>
         </BannerCircle>
       </div>

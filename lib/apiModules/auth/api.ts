@@ -1,7 +1,7 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
+import { UnknownAction } from 'redux';
 import { REHYDRATE } from 'redux-persist';
 import { createBaseApi } from '@/lib/apiModules/baseApi';
-import { UnknownAction } from 'redux';
 
 export const authApi = createBaseApi((options) =>
   createApi({

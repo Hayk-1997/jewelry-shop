@@ -1,8 +1,8 @@
-import { ApiEndpointBuilder } from '@/lib/apiModules/baseApi';
-import { TUserData, TUserLoginFormRequest } from '@/types/user';
 import { setUserToken } from '@/helpers/auth';
+import { ApiEndpointBuilder } from '@/lib/apiModules/baseApi';
 import { ForgotPasswordSchema } from '@/schema/auth/forgotPasswordSchema';
 import { RegisterSchema } from '@/schema/auth/registerSchema';
+import { TUserData, TUserLoginFormRequest } from '@/types/user';
 
 export const authEndpoint = (builder: ApiEndpointBuilder) => ({
   getAuthUser: builder.query<TUserData | null, unknown>({

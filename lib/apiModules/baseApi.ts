@@ -15,16 +15,7 @@ type ModuleName = keyof ApiModules<never, never, never, never>;
 
 export type ApiEndpointBuilder = EndpointBuilder<
   BaseQueryFn<string | FetchArgs, unknown, FetchBaseQueryError, object, FetchBaseQueryMeta>,
-  | 'Category'
-  | 'Material'
-  | 'User'
-  | 'Order'
-  | 'ParentCategory'
-  | 'Product'
-  | 'BackOffice'
-  | 'Tag'
-  | 'Stone'
-  | 'Carat',
+  'Category' | 'Material' | 'User' | 'Order' | 'ParentCategory' | 'Product' | 'BackOffice' | 'Tag' | 'Stone' | 'Carat',
   'api'
 >;
 

@@ -1,5 +1,5 @@
 .root {
-  --primary-color: #262d34;
+  --primary-color: color-primary;
   --white: #fff;
   --soft-white: #f7f7f7;
   --gray-89: #898989;
@@ -8,30 +8,35 @@
   --gold: #a28665;
   --nav-bg: #191c20;
   --black: #292929;
-  --black-rgb: 41,41,41;
+  --black-rgb: 41, 41, 41;
   --purple: #7a6cff;
   --purple-2: #7a6cff;
-  --gray-rgb: 204,204,204;
-  --purple-rgb: 133,69,255;
-  --orange-rgb: 254,169,69;
-  --green-rgb: 100,211,166;
-  --blue-rgb: 37,174,199;
-  --pink-rgb: 226,56,110;
-  --white-rgb: 255,255,255;
+  --gray-rgb: 204, 204, 204;
+  --purple-rgb: 133, 69, 255;
+  --orange-rgb: 254, 169, 69;
+  --green-rgb: 100, 211, 166;
+  --blue-rgb: 37, 174, 199;
+  --pink-rgb: 226, 56, 110;
+  --white-rgb: 255, 255, 255;
   --dark: #3f3354;
-  --bezier-1: cubic-bezier(.7,0,.3,1);
-  --bezier-in-out-6-4: cubic-bezier(.6,0,.4,0);
-  --bezier-ease-out: cubic-bezier(.14,0,.19,.99)
+  --bezier-1: cubic-bezier(0.7, 0, 0.3, 1);
+  --bezier-in-out-6-4: cubic-bezier(0.6, 0, 0.4, 0);
+  --bezier-ease-out: cubic-bezier(0.14, 0, 0.19, 0.99);
 }
 
 // Main Colors
 $colors: (
-        "primary": #6a1b9a, // Purple
-        "secondary": #ff5722, // Orange
-        "hero-background": #191420, // Light Gray
-        "text": #212121, // Dark Gray
-        "white": #ffffff, // White
-        "black": #000000 // Black
+  'primary': #6a1b9a,
+  // Purple
+  'secondary': #ff5722,
+  // Orange
+  'hero-background': #191420,
+  // Light Gray
+  'text': #212121,
+  // Dark Gray
+  'white': #ffffff,
+  // White
+  'black': #000000, // Black
 );
 
 @each $key, $value in $colors {

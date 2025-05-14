@@ -1,10 +1,12 @@
 'use client';
 
 import React, { memo } from 'react';
-import { useController, UseControllerProps } from 'react-hook-form';
-import { UseFormRegister } from 'react-hook-form/dist/types/form';
-import { FieldValues } from 'react-hook-form/dist/types/fields';
 import cn from 'classnames';
+import { useController, UseControllerProps } from 'react-hook-form';
+// eslint-disable-next-line import/no-unresolved
+import { FieldValues } from 'react-hook-form/dist/types/fields';
+// eslint-disable-next-line import/no-unresolved
+import { UseFormRegister } from 'react-hook-form/dist/types/form';
 import FormErrorMessage from '@/components/Molecules/FormErrorMessage';
 import { InputEnum } from '@/types/ui';
 
@@ -23,10 +25,7 @@ interface IProps extends UseControllerProps {
   disabled?: boolean;
 }
 
-const InputWithValidation: React.FC<IProps> = ({
-  type = InputEnum.TEXT,
-  ...props
-}): React.JSX.Element => {
+const InputWithValidation: React.FC<IProps> = ({ type = InputEnum.TEXT, ...props }): React.JSX.Element => {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-expect-error
   const { field, fieldState } = useController(props);

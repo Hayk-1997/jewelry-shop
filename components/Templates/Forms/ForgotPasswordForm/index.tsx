@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
 import InputWithValidation from '@/components/Molecules/InputWithValidation';
 import MainButton from '@/components/Molecules/MainButton';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { forgotPasswordSchema, ForgotPasswordSchema } from '@/schema/auth/forgotPasswordSchema';
 import { useUserForgotPasswordMutation } from '@/lib/apiModules/auth/api';
+import { forgotPasswordSchema, ForgotPasswordSchema } from '@/schema/auth/forgotPasswordSchema';
 
 const ForgotPasswordForm = () => {
   const [userForgotPassword] = useUserForgotPasswordMutation();

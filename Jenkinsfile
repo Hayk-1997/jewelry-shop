@@ -1,10 +1,10 @@
 pipeline {
     agent any
-    
+
     tools {
         nodejs 'Node-18.20.8'  // Use the name you configured above
     }
-    
+
     stages {
         stage('Check Node Version') {
             steps {
@@ -12,7 +12,7 @@ pipeline {
                 sh 'npm --version'
             }
         }
-        
+
         stage('Build Next.js') {
             steps {
                 sh 'npm ci'  // Install dependencies
