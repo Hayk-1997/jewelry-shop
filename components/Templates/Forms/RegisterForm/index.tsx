@@ -1,14 +1,14 @@
 'use client';
 
 import React, { useCallback, useState } from 'react';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import ShowPasswordIcon from '@/components/Icons/ShowPasswordIcon';
 import InputWithValidation from '@/components/Molecules/InputWithValidation';
 import MainButton from '@/components/Molecules/MainButton';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
+import { useUserRegisterMutation } from '@/lib/apiModules/auth/api';
 import { RegisterSchema, registerSchema } from '@/schema/auth/registerSchema';
 import { InputEnum } from '@/types/ui';
-import ShowPasswordIcon from '@/components/Icons/ShowPasswordIcon';
-import { useUserRegisterMutation } from '@/lib/apiModules/auth/api';
 
 const RegisterForm: React.FC = (): React.JSX.Element => {
   const [showPassword, setShowPassword] = useState(false);
@@ -86,8 +86,7 @@ const RegisterForm: React.FC = (): React.JSX.Element => {
           <ShowPasswordIcon show={!showPassword} onClick={() => setShowPassword(!showPassword)} />
         </label>
         <p className="help-text validation-advice" aria-live="polite">
-          Please enter 8 or more characters and at least one number. Leading or trailing spaces will
-          be ignored.
+          Please enter 8 or more characters and at least one number. Leading or trailing spaces will be ignored.
         </p>
       </div>
       <div className="form-group required">

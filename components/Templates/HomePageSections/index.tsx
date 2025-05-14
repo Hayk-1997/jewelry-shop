@@ -53,6 +53,7 @@ const HomePageSections: React.FC<IProps> = ({ parentRef }): React.JSX.Element =>
     });
 
     return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       sectionRefs.current.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
@@ -72,6 +73,7 @@ const HomePageSections: React.FC<IProps> = ({ parentRef }): React.JSX.Element =>
     if (parentRef.current) heroObserver.observe(parentRef.current);
 
     return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       if (parentRef.current) heroObserver.unobserve(parentRef.current);
     };
   }, [parentRef]);

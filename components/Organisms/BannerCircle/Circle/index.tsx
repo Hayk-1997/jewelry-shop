@@ -44,6 +44,7 @@ const Circle: React.FC<IProps> = ({
     }
 
     return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       if (circleRef.current && animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }

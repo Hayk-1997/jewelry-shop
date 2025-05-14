@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
+import classNames from 'classnames';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import classNames from 'classnames';
 
 const AuthPagesTab: React.FC = (): React.JSX.Element => {
   const pathname = usePathname();

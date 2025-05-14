@@ -1,539 +1,551 @@
 .account-confirm-account-welcome {
-    margin: 0 auto;
-    max-width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 14px
+  margin: 0 auto;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 14px;
 }
 
 .account-confirm-page-title-login {
-    height: auto;
-    margin: 0 auto;
-    padding-top: 100px;
-    margin-bottom: 30px !important;
-    text-align: center;
-    text-transform: uppercase
+  height: auto;
+  margin: 0 auto;
+  padding-top: 100px;
+  margin-bottom: 30px !important;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .account-confirm-message-welcome {
-    text-align: center;
-    margin-top: 40px
+  text-align: center;
+  margin-top: 40px;
 }
 
 @media print, screen and (max-width: 39.99875em) {
-    .small-expanded {
-        max-width: 100%;
-        padding: 0 !important;
-        overflow-x: hidden
-    }
+  .small-expanded {
+    max-width: 100%;
+    padding: 0 !important;
+    overflow-x: hidden;
+  }
 }
 
 .space-bottom {
-    margin-bottom: 1.25rem
+  margin-bottom: 1.25rem;
 }
 
 .space-bottom-small {
-    margin-bottom: .75rem
+  margin-bottom: 0.75rem;
 }
 
 @media print, screen and (max-width: 39.99875em) {
-    .button.mobile-button-white {
-        color: #1f1f1f !important;
-        background-color: #fff !important
-    }
+  .button.mobile-button-white {
+    color: #1f1f1f !important;
+    background-color: #fff !important;
+  }
 
-    .button.mobile-button-black {
-        color: #fff !important;
-        background-color: #1f1f1f !important
-    }
+  .button.mobile-button-black {
+    color: #fff !important;
+    background-color: #1f1f1f !important;
+  }
 }
 
 .line-item-separator {
-    border-bottom: 1px solid #1f1f1f;
-    margin: .75rem auto
+  border-bottom: 1px solid #1f1f1f;
+  margin: 0.75rem auto;
 }
 
 .space-left {
-    margin-left: .25rem
+  margin-left: 0.25rem;
 }
 
 .cursor-pointer {
-    cursor: pointer
+  cursor: pointer;
 }
 
 .logout-account p {
-    margin-bottom: 0
+  margin-bottom: 0;
 }
 
 .label-subtitle-myaccount {
-    font-size: 1rem
+  font-size: 1rem;
 }
 
 .link-button {
-    font-size: 1.875rem;
-    max-width: 100%;
-    font-weight: 300
+  font-size: 1.875rem;
+  max-width: 100%;
+  font-weight: 300;
 }
 
 .no-underline {
-    text-decoration: none
+  text-decoration: none;
 }
 
 .my-account-profile-cards .h2.uppercase {
-    font-weight: bold
+  font-weight: bold;
 }
 
 .opacity-bg {
-    background-color: rgba(255, 255, 255, .85)
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .login-tabs__nav > .large-5.opacity-bg {
-    padding-top: 40px;
-    padding-left: 40px;
-    padding-right: 40px
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .form-group-container.opacity-bg {
-    padding-bottom: 40px;
-    padding-left: 40px;
-    padding-right: 40px
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .login-page .login-tabs {
-    padding: 1.75rem 0 7rem
+  padding: 1.75rem 0 7rem;
 }
 
 @media print, screen and (max-width: 63.99875em) {
-    .login-page .login-tabs {
-        padding-bottom: 3.125rem
-    }
+  .login-page .login-tabs {
+    padding-bottom: 3.125rem;
+  }
 }
 
 .login-page .login-tabs__links {
-    list-style-type: none;
-    margin: 0 0 1.75rem 0;
-    border-bottom: .0625rem solid #1f1f1f
+  list-style-type: none;
+  margin: 0 0 1.75rem 0;
+  border-bottom: 0.0625rem solid #1f1f1f;
 }
 
 .login-page .login-tabs__link {
-    display: block;
-    position: relative;
-    text-transform: uppercase;
-    letter-spacing: .25rem;
-    color: #565555;
-    text-align: center;
-    text-decoration: none;
-    padding: .3125rem .5rem;
-    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-    transition: color 250ms cubic-bezier(0.25, 0.1, 0.25, 1)
+  display: block;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: #565555;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.3125rem 0.5rem;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: color 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 @media print, screen and (max-width: 39.99875em) {
-    .login-page .login-tabs__link {
-        text-transform: lowercase;
-        color: #1f1f1f
-    }
+  .login-page .login-tabs__link {
+    text-transform: lowercase;
+    color: #1f1f1f;
+  }
 }
 
 @media print, screen and (max-width: 79.99875em) {
-    .login-page .login-tabs__link {
-        letter-spacing: .0625rem
-    }
+  .login-page .login-tabs__link {
+    letter-spacing: 0.0625rem;
+  }
 }
 
 .login-page .login-tabs__link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    bottom: 0;
-    height: 0;
-    background-color: #1f1f1f;
-    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-    transition: height 250ms cubic-bezier(0.25, 0.1, 0.25, 1)
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  bottom: 0;
+  height: 0;
+  background-color: #1f1f1f;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: height 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .login-page .login-tabs__link.active {
-    color: #1f1f1f
+  color: #1f1f1f;
 }
 
 .login-page .login-tabs__link.active::after {
-    height: .1875rem
+  height: 0.1875rem;
 }
 
 .login-page .login-tabs__item:first-child {
-    margin-left: 0
+  margin-left: 0;
 }
 
 .login-page .login-tabs__item:last-child {
-    margin-right: 0
+  margin-right: 0;
 }
 
 .login-page .login-tabs__panel {
-    display: none
+  display: none;
 }
 
 .login-page .login-tabs__panel.active {
-    display: block
+  display: block;
 }
 
 .login-page .login-tabs__panel .privacy-policy-signup {
-    background-color: #efefef;
-    margin: unset;
-    margin-bottom: 1rem
+  background-color: #efefef;
+  margin: unset;
+  margin-bottom: 1rem;
 }
 
-html[dir=rtl] .login-page .login-tabs__panel .privacy-policy-signup .boolean-field {
-    padding-right: unset;
-    padding-left: 1rem
+html[dir='rtl'] .login-page .login-tabs__panel .privacy-policy-signup .boolean-field {
+  padding-right: unset;
+  padding-left: 1rem;
 }
 
 .login-page .login-tabs__panel .marketing-policy-signup {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
-.login-page .button[type=submit] {
-    margin-top: 1.5rem;
-    margin-bottom: 0
+.login-page .button[type='submit'] {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 .account-card {
-    padding: 1.25rem;
-    margin-bottom: 1.25rem;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, .3)
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
 }
 
 .account-card-header {
-    padding-bottom: 1.25rem;
-    display: flex;
-    justify-content: space-between
+  padding-bottom: 1.25rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .address-card-body .remove-address {
-    font-size: .9375rem
+  font-size: 0.9375rem;
 }
 
 .uppercase {
-    color: #1f1f1f;
-    text-transform: uppercase
+  color: #1f1f1f;
+  text-transform: uppercase;
 }
 
 .small-space {
-    line-height: 1rem
+  line-height: 1rem;
 }
 
 .wishlist-card-social .profile-card-header {
-    padding-bottom: .625rem
+  padding-bottom: 0.625rem;
 }
 
 .wishlist-card .wl-social-sharing {
-    margin-bottom: .625rem
+  margin-bottom: 0.625rem;
 }
 
 .wishlist-card .share-icons {
-    display: inline-block;
-    text-decoration: none;
-    padding: .625rem;
-    width: 2.5rem;
-    height: 2.5rem
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.625rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .wishlist-card .share-icons:first-child {
-    padding-left: 0
+  padding-left: 0;
 }
 
 .wishlist-card svg {
-    width: 100%;
-    height: 100%
+  width: 100%;
+  height: 100%;
 }
 
 .wishlist-card .boolean-field {
-    padding-right: 0;
-    margin-bottom: 0
+  padding-right: 0;
+  margin-bottom: 0;
 }
 
 .wishlist-card .boolean-field .checkbox-label {
-    cursor: pointer;
-    text-decoration: underline
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .wishlist-card .boolean-field .checkbox-label:hover {
-    text-decoration: none
+  text-decoration: none;
 }
 
 .wishlist-card .url-text {
-    word-break: break-all
+  word-break: break-all;
 }
 
 .wishlist-card .public-label {
-    display: none
+  display: none;
 }
 
 .wishlist-card.is-disabled .private-label {
-    display: none
+  display: none;
 }
 
 .wishlist-card.is-disabled .public-label {
-    display: block
+  display: block;
 }
 
 .wishlist-card.is-disabled .share-icons {
-    fill: silver;
-    pointer-events: none
+  fill: silver;
+  pointer-events: none;
 }
 
 .wishlist-card.is-disabled .url-text {
-    color: silver;
-    user-select: none;
-    display: none
+  color: silver;
+  user-select: none;
+  display: none;
 }
 
 .wishlist-card .profile-card-body {
-    align-items: baseline
+  align-items: baseline;
 }
 
 .wishlist-card .profile-card-body .wishlist-button {
-    margin-right: auto;
-    padding-bottom: .3125rem;
-    text-align: left;
-    text-decoration: underline
+  margin-right: auto;
+  padding-bottom: 0.3125rem;
+  text-align: left;
+  text-decoration: underline;
 }
 
 .close-button {
-    z-index: 1 !important
+  z-index: 1 !important;
 }
 
 .wishlist-account-card {
-    margin-top: .625rem;
-    margin-bottom: .625rem
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
 }
 
 .account-confirm-account-welcome {
-    min-height: 25rem
+  min-height: 25rem;
 }
 
 @media print, screen and (max-width: 39.99875em) {
-    .account-order-history .hero {
-        background-color: #f0ede8;
-        padding: 3.125rem 0
-    }
+  .account-order-history .hero {
+    background-color: #f0ede8;
+    padding: 3.125rem 0;
+  }
 }
 
 @media print, screen and (max-width: 39.99875em) {
-    .account-order-history .custom-select.order-history-select {
-        height: auto;
-        padding-top: .625rem;
-        padding-bottom: .625rem;
-        text-align-last: center;
-        border-color: #1f1f1f;
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%31, 31, 31%29'></polygon></svg>");
-        text-transform: uppercase
-    }
+  .account-order-history .custom-select.order-history-select {
+    height: auto;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    text-align-last: center;
+    border-color: #1f1f1f;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%31, 31, 31%29'></polygon></svg>");
+    text-transform: uppercase;
+  }
 }
 
 .account-order-history .order-list-container .card-body .cell.vertical-padding {
-    padding: 3.125rem 0
+  padding: 3.125rem 0;
 }
 
 @media print, screen and (max-width: 39.99875em) {
-    .account-order-history .order-list-container .card-body .cell.vertical-padding {
-        padding: .625rem 0
-    }
+  .account-order-history .order-list-container .card-body .cell.vertical-padding {
+    padding: 0.625rem 0;
+  }
 }
 
 .account-order-history .order-list-container .card-body .cell h2 {
-    color: #565555;
-    margin-bottom: 1.875rem
+  color: #565555;
+  margin-bottom: 1.875rem;
 }
 
-.account-order-history .order-list-container .card-body .cell p, .account-order-history .order-list-container .card-body .cell span {
-    margin-bottom: 0;
-    color: #565555
+.account-order-history .order-list-container .card-body .cell p,
+.account-order-history .order-list-container .card-body .cell span {
+  margin-bottom: 0;
+  color: #565555;
 }
 
 .account-order-history .order-list-container .card-body .cell .title-date {
-    background-color: rgba(0, 0, 0, 0);
-    padding: 0;
-    text-indent: 0
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  text-indent: 0;
 }
 
 .account-order-history .order-list-container .card-body .cell .button.hollow {
-    width: 100%;
-    margin-top: 1.875rem
+  width: 100%;
+  margin-top: 1.875rem;
 }
 
 @media print, screen and (max-width: 39.99875em) {
-    .account-order-history .order-list-container .card-body .cell .button.hollow {
-        width: 60%;
-        margin-top: .625rem
-    }
+  .account-order-history .order-list-container .card-body .cell .button.hollow {
+    width: 60%;
+    margin-top: 0.625rem;
+  }
 }
 
 @media print, screen and (max-width: 39.99875em) {
-    .order-8 {
-        order: 8
-    }
+  .order-8 {
+    order: 8;
+  }
 
-    .order-7 {
-        order: 7
-    }
+  .order-7 {
+    order: 7;
+  }
 
-    .order-6 {
-        order: 6
-    }
+  .order-6 {
+    order: 6;
+  }
 
-    .order-5 {
-        order: 5
-    }
+  .order-5 {
+    order: 5;
+  }
 
-    .order-4 {
-        order: 4
-    }
+  .order-4 {
+    order: 4;
+  }
 
-    .order-3 {
-        order: 3
-    }
+  .order-3 {
+    order: 3;
+  }
 
-    .order-2 {
-        order: 2
-    }
+  .order-2 {
+    order: 2;
+  }
 
-    .return-mode-case, .exchange-mode-case {
-        border-bottom: 1px solid silver;
-        padding-top: .9375rem
-    }
+  .return-mode-case,
+  .exchange-mode-case {
+    border-bottom: 1px solid silver;
+    padding-top: 0.9375rem;
+  }
 }
 
 .product-return-info {
-    border-bottom: 1px solid silver
+  border-bottom: 1px solid silver;
 }
 
-.return-mode-case, .exchange-mode-case {
-    border-top: 1px solid silver;
-    padding-top: 1.25rem
+.return-mode-case,
+.exchange-mode-case {
+  border-top: 1px solid silver;
+  padding-top: 1.25rem;
 }
 
-.return-mode-case .product-exchange-slider, .exchange-mode-case .product-exchange-slider {
-    padding: 0 1.4375rem;
-    width: 100%
+.return-mode-case .product-exchange-slider,
+.exchange-mode-case .product-exchange-slider {
+  padding: 0 1.4375rem;
+  width: 100%;
 }
 
-.return-mode-case .product-exchange .select-item-button, .exchange-mode-case .product-exchange .select-item-button {
-    width: 100%
+.return-mode-case .product-exchange .select-item-button,
+.exchange-mode-case .product-exchange .select-item-button {
+  width: 100%;
 }
 
-.return-mode-case .product-exchange img, .exchange-mode-case .product-exchange img {
-    border: 1px solid rgba(0, 0, 0, 0)
+.return-mode-case .product-exchange img,
+.exchange-mode-case .product-exchange img {
+  border: 1px solid rgba(0, 0, 0, 0);
 }
 
-.return-mode-case .product-exchange img:hover, .exchange-mode-case .product-exchange img:hover {
-    border: 1px solid #85715d;
-    cursor: pointer
+.return-mode-case .product-exchange img:hover,
+.exchange-mode-case .product-exchange img:hover {
+  border: 1px solid #85715d;
+  cursor: pointer;
 }
 
-.return-mode-case .product-exchange-item.selected img, .exchange-mode-case .product-exchange-item.selected img {
-    border: 1px solid #85715d;
-    background-color: #f0ede8
+.return-mode-case .product-exchange-item.selected img,
+.exchange-mode-case .product-exchange-item.selected img {
+  border: 1px solid #85715d;
+  background-color: #f0ede8;
 }
 
-.return-mode-case .product-exchange .slick-arrow, .exchange-mode-case .product-exchange .slick-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-110%);
-    z-index: 1
+.return-mode-case .product-exchange .slick-arrow,
+.exchange-mode-case .product-exchange .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-110%);
+  z-index: 1;
 }
 
-.return-mode-case .product-exchange .slick-prev, .exchange-mode-case .product-exchange .slick-prev {
-    left: -10px
+.return-mode-case .product-exchange .slick-prev,
+.exchange-mode-case .product-exchange .slick-prev {
+  left: -10px;
 }
 
-.return-mode-case .product-exchange .slick-next, .exchange-mode-case .product-exchange .slick-next {
-    right: -10px
+.return-mode-case .product-exchange .slick-next,
+.exchange-mode-case .product-exchange .slick-next {
+  right: -10px;
 }
 
-.return-mode-case .product-exchange .slick-slide, .exchange-mode-case .product-exchange .slick-slide {
-    padding: 0 .625rem
+.return-mode-case .product-exchange .slick-slide,
+.exchange-mode-case .product-exchange .slick-slide {
+  padding: 0 0.625rem;
 }
 
 select.order-choose-mode:disabled {
-    color: silver;
-    border-color: silver;
-    background-color: #fff
+  color: silver;
+  border-color: silver;
+  background-color: #fff;
 }
 
 @media print, screen and (max-width: 39.99875em) {
-    .product-return-info__status {
-        border-bottom: 1px solid silver;
-        text-align: left !important;
-        padding-left: .9375rem
-    }
+  .product-return-info__status {
+    border-bottom: 1px solid silver;
+    text-align: left !important;
+    padding-left: 0.9375rem;
+  }
 
-    .product-return-info__status .checkbox-label {
-        width: 0
-    }
+  .product-return-info__status .checkbox-label {
+    width: 0;
+  }
 }
 
 @media print, screen and (min-width: 40em) {
-    .select-product {
-        text-transform: uppercase
-    }
+  .select-product {
+    text-transform: uppercase;
+  }
 }
 
 .visibility-hidden {
-    visibility: hidden;
-    height: 0;
-    padding: 0
+  visibility: hidden;
+  height: 0;
+  padding: 0;
 }
 
 .highlights-bg-field {
-    margin-top: -1.25rem;
-    margin-left: -1.25rem;
-    margin-right: -1.25rem;
-    padding-top: .625rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    padding-bottom: .625rem;
-    background-color: #f1ede8
+  margin-top: -1.25rem;
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+  padding-top: 0.625rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-bottom: 0.625rem;
+  background-color: #f1ede8;
 }
 
 .highlights-bg-field.grid-margin-x {
-    padding-left: .625rem;
-    padding-right: .625rem
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
 }
 
 .highlights-bg-field.margin-top-1 {
-    margin-top: 1.5625rem !important
+  margin-top: 1.5625rem !important;
 }
 
 @media print, screen and (max-width: 39.99875em) {
-    .highlights-bg-field.margin-bottom-1:first-child {
-        margin-top: .9375rem
-    }
+  .highlights-bg-field.margin-bottom-1:first-child {
+    margin-top: 0.9375rem;
+  }
 }
 
 .privacy-policy-form {
-    background-color: #efefef;
-    margin-bottom: 16px
+  background-color: #efefef;
+  margin-bottom: 16px;
 }
 
 @media print, screen and (max-width: 39.99875em) {
-    .privacy-policy-form {
-        margin-top: unset
-    }
+  .privacy-policy-form {
+    margin-top: unset;
+  }
 }
 
-.page[data-action=Login-Show] {
-    background-image: var(--custom-background-image-url);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed
+.page[data-action='Login-Show'] {
+  background-image: var(--custom-background-image-url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 @media print, screen and (min-width: 40em) {
-    .page[data-action=Login-Show] {
-        background-image: var(--custom-background-image-url-desktop)
-    }
+  .page[data-action='Login-Show'] {
+    background-image: var(--custom-background-image-url-desktop);
+  }
 }
