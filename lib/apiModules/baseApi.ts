@@ -10,12 +10,23 @@ import {
 } from '@reduxjs/toolkit/query';
 import { getUserToken } from '@/helpers/auth';
 import { authEndpoint } from '@/lib/apiModules/auth/endpoints';
+import { searchEndpoint } from '@/lib/apiModules/search/enpoints';
 
 type ModuleName = keyof ApiModules<never, never, never, never>;
 
 export type ApiEndpointBuilder = EndpointBuilder<
   BaseQueryFn<string | FetchArgs, unknown, FetchBaseQueryError, object, FetchBaseQueryMeta>,
-  'Category' | 'Material' | 'User' | 'Order' | 'ParentCategory' | 'Product' | 'BackOffice' | 'Tag' | 'Stone' | 'Carat',
+  | 'Category'
+  | 'Material'
+  | 'User'
+  | 'Order'
+  | 'Search'
+  | 'Product'
+  | 'BackOffice'
+  | 'Tag'
+  | 'Stone'
+  | 'Carat'
+  | 'ParentCategory',
   'api'
 >;
 
@@ -45,8 +56,10 @@ export const createBaseApi = <T extends ModuleName>(createApi: CreateApi<T>) =>
       'Tag',
       'Carat',
       'Stone',
-    ],
+      'Search',
+    ] as const,
     endpoints: (builder) => ({
       ...authEndpoint(builder),
+      ...searchEndpoint(builder),
     }),
   });
