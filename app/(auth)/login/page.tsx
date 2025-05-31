@@ -7,11 +7,10 @@ export const metadata = {
 
 const LoginPage: React.FC = (): React.JSX.Element => {
   return (
-    <div className="login-tabs__panel cell medium-8 large-5 active">
-      <div className="form-group-container opacity-bg">
-        <LoginForm />
-      </div>
-    </div>
+    <>
+      <p className="text-center text-[32px] text-white font-bold mb-[39px]">LOGIN IN TO YOUR ACCOUNT</p>
+      <LoginForm />
+    </>
   );
 };
 

@@ -4,12 +4,10 @@ import React, { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
-// import { FieldValues } from 'react-hook-form/dist/types/fields';
-import ShowPasswordIcon from '@/components/Icons/ShowPasswordIcon';
-import MainButton from '@/components/Molecules/MainButton';
 import { useUserLoginMutation } from '@/lib/apiModules/auth/api';
 import { LoginSchema, loginSchema } from '@/schema/auth/loginSchema';
 import { InputEnum } from '@/types/ui';
+import PasswordIcon from 'components/Icons/PasswordIcon';
 import InputWithValidation from 'components/Molecules/InputWithValidation';
 
 const LoginForm: React.FC = (): React.JSX.Element => {
@@ -30,10 +28,12 @@ const LoginForm: React.FC = (): React.JSX.Element => {
   };
 
   return (
-    <form className="login enterDisable" onSubmit={handleSubmit(onSubmit)}>
-      <div className="form-group required">
-        <label className="form-control-label" htmlFor="login-form-email">
-          E-mail Address
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="mb-[30px]">
+        <label htmlFor="login-form-email">
+          <p className="mb-[5px] text-warm-stone">E-mail Address</p>
+        </label>
+        <div className="relative">
           <InputWithValidation
             type="email"
             id="login-form-email"
@@ -42,11 +42,24 @@ const LoginForm: React.FC = (): React.JSX.Element => {
             control={control}
             withError={true}
           />
-        </label>
+          <div className="absolute right-[5px] top-[20px]">
+            <svg
+              className="h-5 w-5 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M16 12H8m8 0a4 4 0 10-8 0 4 4 0 008 0z" />
+            </svg>
+          </div>
+        </div>
       </div>
-      <div className="form-group required">
-        <label className="form-control-label position-relative" htmlFor="login-form-password">
-          Password
+      <div className="mb-[5px]">
+        <label className="text-warm-stone" htmlFor="login-form-password">
+          <p className="mb-[5px]">Password</p>
+        </label>
+        <div className="relative">
           <InputWithValidation
             type={!showPassword ? InputEnum.PASSWORD : InputEnum.TEXT}
             id="login-form-password"
@@ -55,22 +68,21 @@ const LoginForm: React.FC = (): React.JSX.Element => {
             control={control}
             withError={true}
           />
-          <ShowPasswordIcon show={!showPassword} onClick={() => setShowPassword(!showPassword)} />
-        </label>
-      </div>
-      <div className="form-login-bottom-wrapper grid-x">
-        <div className="form-group remember-me cell small-6">
-          <label className="custom-control-label boolean-field" htmlFor="rememberMe">
-            <input type="checkbox" className="custom-control-input" name="loginRememberMe" />
-            <span className="checkbox-input" />
-            <span className="checkbox-label"> Remember me </span>
-          </label>
-        </div>
-        <div className="forgot-password cell small-6">
-          <Link href="/forgot-password">forgot password?</Link>
+          <div className="absolute right-[5px] top-[20px]">
+            <PasswordIcon show={!showPassword} onClick={() => setShowPassword(!showPassword)} />
+          </div>
         </div>
       </div>
-      <MainButton type="submit" name="Login" />
+      <div className="mt-[15px] flex justify-end mb-[30px] text-warm-stone font-normal">
+        <Link href="/forgot-password">Forgot Password</Link>
+      </div>
+      <button
+        type="submit"
+        name="Login"
+        className="bg-warm-olive text-black text-[16px] font-bold rounded-[4px] cursor-pointer py-2 px-4 w-full"
+      >
+        LOGIN
+      </button>
     </form>
   );
 };

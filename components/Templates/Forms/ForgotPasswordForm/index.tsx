@@ -4,7 +4,6 @@ import React from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import InputWithValidation from '@/components/Molecules/InputWithValidation';
-import MainButton from '@/components/Molecules/MainButton';
 import { useUserForgotPasswordMutation } from '@/lib/apiModules/auth/api';
 import { forgotPasswordSchema, ForgotPasswordSchema } from '@/schema/auth/forgotPasswordSchema';
 
@@ -24,10 +23,12 @@ const ForgotPasswordForm = () => {
   };
 
   return (
-    <form className="login enterDisable" onSubmit={handleSubmit(onSubmit)}>
-      <div className="form-group required">
-        <label className="form-control-label" htmlFor="email">
-          E-mail Address
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="mb-[30px]">
+        <label className="text-warm-stone" htmlFor="email">
+          <p className="mb-[5px]">E-mail Address</p>
+        </label>
+        <div className="relative">
           <InputWithValidation
             type="email"
             id="email"
@@ -36,9 +37,15 @@ const ForgotPasswordForm = () => {
             control={control}
             withError={true}
           />
-        </label>
+        </div>
       </div>
-      <MainButton type="submit" name="Submit" />
+      <button
+        type="submit"
+        name="submit"
+        className="bg-warm-olive text-black text-[16px] font-bold rounded-[4px] cursor-pointer py-2 px-4 w-full"
+      >
+        Submit
+      </button>
     </form>
   );
 };

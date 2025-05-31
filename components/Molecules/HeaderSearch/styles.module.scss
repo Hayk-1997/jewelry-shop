@@ -1,0 +1,10 @@
+.search_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.search_input {
+  transition: width 0.4s ease, opacity 0.4s ease !important;
+}
