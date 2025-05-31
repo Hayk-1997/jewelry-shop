@@ -3,12 +3,12 @@
 import React, { useCallback, useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import ShowPasswordIcon from '@/components/Icons/ShowPasswordIcon';
 import InputWithValidation from '@/components/Molecules/InputWithValidation';
-import MainButton from '@/components/Molecules/MainButton';
 import { useUserRegisterMutation } from '@/lib/apiModules/auth/api';
 import { RegisterSchema, registerSchema } from '@/schema/auth/registerSchema';
 import { InputEnum } from '@/types/ui';
+
+import PasswordIcon from 'components/Icons/PasswordIcon';
 
 const RegisterForm: React.FC = (): React.JSX.Element => {
   const [showPassword, setShowPassword] = useState(false);
@@ -34,22 +34,38 @@ const RegisterForm: React.FC = (): React.JSX.Element => {
   );
 
   return (
-    <form className="registration enterDisable" onSubmit={handleSubmit(onSubmit)}>
-      <div className="form-group required">
-        <label className="form-control-label" htmlFor="firstName">
-          First Name
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="mb-[30px]">
+        <label htmlFor="firstName">
+          <p className="mb-[5px] text-warm-stone">First Name</p>
+        </label>
+        <div className="relative">
           <InputWithValidation
             id="firstName"
             name="firstName"
-            placeholder="Enter your first name"
+            placeholder="Enter your last name"
             control={control}
             withError={true}
           />
-        </label>
+          <div className="absolute right-[5px] top-[20px]">
+            <svg
+              className="h-5 w-5 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M16 12H8m8 0a4 4 0 10-8 0 4 4 0 008 0z" />
+            </svg>
+          </div>
+        </div>
       </div>
-      <div className="form-group required">
-        <label className="form-control-label" htmlFor="lastName">
-          Last Name
+
+      <div className="mb-[30px]">
+        <label htmlFor="lastName">
+          <p className="mb-[5px] text-warm-stone">Last Name</p>
+        </label>
+        <div className="relative">
           <InputWithValidation
             id="lastName"
             name="lastName"
@@ -57,53 +73,91 @@ const RegisterForm: React.FC = (): React.JSX.Element => {
             control={control}
             withError={true}
           />
-        </label>
+          <div className="absolute right-[5px] top-[20px]">
+            <svg
+              className="h-5 w-5 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M16 12H8m8 0a4 4 0 10-8 0 4 4 0 008 0z" />
+            </svg>
+          </div>
+        </div>
       </div>
-      <div className="form-group required">
-        <label className="form-control-label" htmlFor="registerEmail">
-          E-mail Address
+
+      <div className="mb-[30px]">
+        <label htmlFor="email">
+          <p className="mb-[5px] text-warm-stone">E-mail Address</p>
+        </label>
+        <div className="relative">
           <InputWithValidation
             type="email"
-            id="registerEmail"
+            id="email"
             name="email"
             placeholder="Enter your email address"
             control={control}
             withError={true}
           />
-        </label>
+          <div className="absolute right-[5px] top-[20px]">
+            <svg
+              className="h-5 w-5 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M16 12H8m8 0a4 4 0 10-8 0 4 4 0 008 0z" />
+            </svg>
+          </div>
+        </div>
       </div>
-      <div className="form-group required">
-        <label className="form-control-label position-relative" htmlFor="registerPassword">
-          Password
+
+      <div className="mb-[30px]">
+        <label className="text-warm-stone" htmlFor="password">
+          <p className="mb-[5px]">Password</p>
+        </label>
+        <div className="relative">
           <InputWithValidation
             type={!showPassword ? InputEnum.PASSWORD : InputEnum.TEXT}
-            id="registerPassword"
+            id="password"
             name="password"
             placeholder="Enter your password"
             control={control}
             withError={true}
           />
-          <ShowPasswordIcon show={!showPassword} onClick={() => setShowPassword(!showPassword)} />
-        </label>
-        <p className="help-text validation-advice" aria-live="polite">
-          Please enter 8 or more characters and at least one number. Leading or trailing spaces will be ignored.
-        </p>
+          <div className="absolute right-[5px] top-[20px]">
+            <PasswordIcon show={!showPassword} onClick={() => setShowPassword(!showPassword)} />
+          </div>
+        </div>
       </div>
-      <div className="form-group required">
-        <label className="form-control-label position-relative" htmlFor="registerConfirmPassword">
-          Confirm Password
+
+      <div className="mb-[30px]">
+        <label className="text-warm-stone" htmlFor="confirmPassword">
+          <p className="mb-[5px]">Confirm Password</p>
+        </label>
+        <div className="relative">
           <InputWithValidation
             type={!showPassword ? InputEnum.PASSWORD : InputEnum.TEXT}
-            id="registerConfirmPassword"
+            id="confirmPassword"
             name="confirmPassword"
-            placeholder="Enter your confirm password"
+            placeholder="Enter your password"
             control={control}
             withError={true}
           />
-          <ShowPasswordIcon show={!showPassword} onClick={() => setShowPassword(!showPassword)} />
-        </label>
+          <div className="absolute right-[5px] top-[20px]">
+            <PasswordIcon show={!showPassword} onClick={() => setShowPassword(!showPassword)} />
+          </div>
+        </div>
       </div>
-      <MainButton type="submit" name="Register" />
+      <button
+        type="submit"
+        name="Login"
+        className="bg-warm-olive text-black text-[16px] font-bold rounded-[4px] cursor-pointer py-2 px-4 w-full"
+      >
+        LOGIN
+      </button>
     </form>
   );
 };

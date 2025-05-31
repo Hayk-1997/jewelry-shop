@@ -6,7 +6,7 @@ interface IProps {
   onClick: () => void;
 }
 
-const ShowPasswordIcon: React.FC<IProps> = ({ show, onClick }: IProps): React.JSX.Element => (
+const PasswordIcon: React.FC<IProps> = ({ show, onClick }: IProps): React.JSX.Element => (
   <span
     data-show-hide=""
     aria-label="Show/hide password"
@@ -18,4 +18,4 @@ const ShowPasswordIcon: React.FC<IProps> = ({ show, onClick }: IProps): React.JS
   />
 );
 
-export default ShowPasswordIcon;
+export default PasswordIcon;

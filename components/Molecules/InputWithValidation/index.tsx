@@ -10,8 +10,6 @@ import { UseFormRegister } from 'react-hook-form/dist/types/form';
 import FormErrorMessage from '@/components/Molecules/FormErrorMessage';
 import { InputEnum } from '@/types/ui';
 
-import styles from './styles.modules.scss';
-
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 interface IProps extends UseControllerProps {
@@ -31,12 +29,15 @@ const InputWithValidation: React.FC<IProps> = ({ type = InputEnum.TEXT, ...props
   const { field, fieldState } = useController(props);
 
   return (
-    <div className="w-100">
+    <>
       <input
         {...field}
-        className={cn('form-control', {
-          [styles.errorInput]: fieldState.error && props.withError,
-        })}
+        className={cn(
+          'bg-black-overlay border border-smoky-gray text-sm rounded-lg block w-full h-[57px] pl-[20px] pr-[20px] text-medium-gray',
+          {
+            'border-red-500!': fieldState.error && props.withError,
+          },
+        )}
         placeholder={props.placeholder}
         type={type}
         disabled={props.disabled}
@@ -49,11 +50,11 @@ const InputWithValidation: React.FC<IProps> = ({ type = InputEnum.TEXT, ...props
         {...(type === 'number' && { min: 0 })}
       />
       {props.withError && fieldState.error && (
-        <div className="mt-1">
+        <div className="mt-1 text-red-500!">
           <FormErrorMessage message={fieldState.error.message!} />
         </div>
       )}
-    </div>
+    </>
   );
 };
 
